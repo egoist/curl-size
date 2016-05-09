@@ -1,7 +1,7 @@
 #!/bin/bash
 
 getSizeByDownload() {
-  echo `curl ${URL} --silent --write-out '%{size_download}' --output /dev/null`
+  echo `curl ${URL} -sL --write-out '%{size_download}' --output /dev/null`
 }
 
 humanlizeSize() {
@@ -26,7 +26,7 @@ if [ -z "$URL" ]; then
 fi
 
 # by Content-Length in header
-SIZE=`curl -sI $URL | grep Content-Length | awk '{print $2}'`
+SIZE=`curl -sLI $URL | grep Content-Length | awk '{print $2}'`
 SIZE=${SIZE//$'\r'}
 
 # no Content-Length
