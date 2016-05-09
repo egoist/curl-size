@@ -26,7 +26,7 @@ if [ -z "$URL" ]; then
 fi
 
 # by Content-Length in header
-SIZE=`curl -sI $URL | grep Content-Length | awk '{print $2}' | xargs`
+SIZE=`curl -sI $URL | grep Content-Length | awk '{print $2}'`
 SIZE=${SIZE//$'\r'}
 
 # no Content-Length
