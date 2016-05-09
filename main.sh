@@ -39,6 +39,3 @@ if [ -z "$SIZE" ]; then
 fi
 
 echo $(humanlizeSize $SIZE)
-
-
-
