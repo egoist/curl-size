@@ -1,6 +1,6 @@
 {
   "name": "curl-size",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use curl to get remote file size.",
   "license": "MIT",
   "repository": "egoist/curl-size",
